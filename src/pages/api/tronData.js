@@ -16,8 +16,8 @@ export default async function handler(req, res) {
 
     const processedData = response.data.prices.map((p) => ({
       timestamp: p[0],
-      date: moment(p[0]).format("DD/MM/YYYY"), // adding formatted date
-      price: parseFloat(p[1].toFixed(3)), // rounding off to 3 decimal places and converting back to number
+      date: moment(p[0]).format("DD/MM/YYYY"),
+      price: parseFloat(p[1].toFixed(3)),
     }));
 
     console.log(processedData);
